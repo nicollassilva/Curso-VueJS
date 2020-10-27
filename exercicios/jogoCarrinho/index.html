@@ -1,0 +1,19 @@
+<script src="../media/vue.js"></script>
+<link rel="stylesheet" href="../media/default.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<div id="app">
+    <p class="title">Clique nas setas para andar com o "carrinho"</p>
+    <div class="botoes">
+        <button @click="changeTop(false)"><i class="fas fa-angle-up"></i></button>
+        <button @click="changeTop(true)"><i class="fas fa-angle-down"></i></button>
+        <button @click="changeLeft(true)"><i class="fas fa-angle-right"></i></button>
+        <button @click="changeLeft(false)"><i class="fas fa-angle-left"></i></button>
+    </div>
+    <div class="mapa">
+        <div class="carro" :style="carrinho"></div>
+    </div>
+</div>
+
+<script src="index.js"></script>
