@@ -1,7 +1,8 @@
 new Vue({
     el: '#app',
     data: {
-        progresso: 0
+        progresso: 0,
+        working: ''
     },
     computed: {
         progress() {
@@ -12,9 +13,15 @@ new Vue({
     },
     methods: {
         iniciarProgresso() {
-            setInterval(() => {
+            this.working = setInterval(() => {
                 this.progresso < 100 ? this.progresso += 10 : this.progresso = 0
             }, 500)
+        },
+        pararProgresso() {
+            clearInterval(this.working)
+        },
+        resetarProgresso() {
+            this.progresso = 0
         }
     }
 })
