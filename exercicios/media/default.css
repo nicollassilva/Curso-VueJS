@@ -54,3 +54,12 @@ button {
     border: 1px solid var(--vermelho-escuro);
     cursor: pointer;
 }
+
+input {
+	height: 40px;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	font-size: 12px;
+	width: 300px
+}
