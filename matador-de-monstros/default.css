@@ -1,0 +1,99 @@
+body {
+    background-color: darkgray;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Verdana', sans-serif;
+}
+
+*:focus { outline: none; }
+
+.bloco {
+    width: calc(100% - 40px);
+    padding: 10px;
+    min-height: 60px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.bloco .status {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bloco .status .vida {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+
+.bloco .status .vida .barra {
+    height: 40px;
+    transition: width .1s linear;
+    width: 0;
+    border-radius: 3px;
+}
+
+.bloco .status .vida .barra.inteira { background-color: green; }
+.bloco .status .vida .barra.metade { background-color: yellow; }
+.bloco .status .vida .barra.fim { background-color: red; }
+
+.bloco .inicio {
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid darkblue;
+    background-color: lightblue;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bloco.list {
+    flex-direction: column;
+}
+
+.bloco.list p {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    margin: 2px 0;
+    height: 20px;
+}
+
+.bloco.list p.monstro { background-color: rosybrown; }
+.bloco.list p.player { background-color: skyblue; }
+
+.bloco button.jog {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter .3s;
+}
+
+.bloco button.jog:hover { filter: brightness(120%); transition: filter .3s; }
+
+.bloco button.jog.atacar { background-color: rgb(21, 179, 100); }
+.bloco button.jog.ataqueSupremo { background-color: rgb(219, 185, 30); }
+.bloco button.jog.curar { background-color: rgb(201, 26, 26); }
+.bloco button.jog.desistir { background-color: rgb(27, 32, 30); }

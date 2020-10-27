@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script src="../exercicios/media/vue.js"></script>
+<link rel="stylesheet" href="default.css">
+
+<div id="app">
+    <div class="bloco">
+        <div class="status">
+            <p>Player</p>
+            <div class="vida">
+                <div :class="[barraVidaPlayer, 'barra']" :style="{width: porcVidaPlayer}"></div>
+            </div>
+            <p>{{ porcVidaPlayer }}</p>
+        </div>
+        <div class="status">
+            <p>Monstro</p>
+            <div class="vida">
+                <div :class="['barra', barraVidaMonstro]" :style="{width: porcVidaMonstro}"></div>
+            </div>
+            <p>{{ porcVidaMonstro }}</p>
+        </div>
+    </div>
+    <div class="bloco" v-if="!jogando && this.vencedor > 0">
+        <span>{{ vencedor === 1 ? 'Você' : 'Monstro' }} ganhou a partida!!</span>
+    </div>
+    <div class="bloco" v-if="!jogando">
+        <button class="inicio" @click="jogando = !jogando, vencedor = null">Iniciar jogo</button>
+    </div>
+    <div class="bloco" v-else>
+        <button class="jog atacar" @click="ataquePlayer(false)">Atacar</button>
+        <button class="jog ataqueSupremo" @click="ataquePlayer(true)">Ataque supremo</button>
+        <button class="jog curar" @click="cura()">Curar</button>
+        <button class="jog desistir" @click="jogando = !jogando">Desistir</button>
+    </div>
+    <div class="bloco list" v-if="Array.isArray(logs) && logs.length > 0">
+        <p v-for="log in logs" :class="log.causador">{{ log.texto }}</p>
+    </div>
+</div>
+
+<script src="default.js"></script>
