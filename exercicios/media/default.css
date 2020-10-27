@@ -1,0 +1,56 @@
+:root {
+	--rosa-escuro: rgba(232, 67, 147, 1.0);
+	--rosa-medio: rgb(241, 83, 160, 1.0);
+	--rosa-claro: rgba(253, 121, 168, 1.0);
+
+	--branco-original: rgba(255, 255, 255, 1.0);
+	--branco-bege: rgba(247, 241, 227, 1.0);
+	--cinza-claro: rgba(223, 230, 233, 1.0);
+
+	--azul-escuro: rgba(55, 66, 250, 1.0);
+	--azul-medio: rgba(30, 144, 255, 1.0);
+	--azul-claro: rgba(112, 161, 255, 1.0);
+
+	--vermelho-escuro: rgba(235, 47, 6, 1.0);
+	--vermelho-claro: rgba(255, 94, 87, 1.0);
+
+	--laranja-escuro: rgb(238, 81, 9);
+	--laranja-claro: rgb(245, 125, 69);
+
+	--preto-escuro: rgba(30, 39, 46, 1.0);
+	--preto-medio: rgb(37, 49, 58);
+	--preto-claro: rgba(72, 84, 96, 1.0);
+
+	--amarelo-escuro: rgba(247, 183, 49, 1.0);
+	--amarelo-claro: rgba(254, 211, 48, 1.0);
+
+	--verde-escuro: rgba(68, 189, 50, 1.0);
+	--verde-claro: rgba(76, 209, 55, 1.0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--branco-bege);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+*:focus { outline: none; }
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--vermelho-claro);
+    color: white;
+    border: 1px solid var(--vermelho-escuro);
+    cursor: pointer;
+}
