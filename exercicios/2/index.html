@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="style.css">
 
 <div id="app">
-    <p>Chamei esse exercício de Espelhagem</p>
+    <p class="title">Chamei esse exercício de Espelhagem</p>
     <input type="text" v-model="inputValor">
-    <p><b>Resultado:</b> {{ inputValor }}</p>
+    <p><b>Resultado:</b> {{ inputValor == 'Digite alguma coisa aqui' || inputValor == '' ? 'Digite algo acima e veja a mágica' : inputValor }}</p>
 </div>
 
 <script src="index.js"></script>

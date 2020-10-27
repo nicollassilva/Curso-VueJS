@@ -1,0 +1,18 @@
+<script src="../media/vue.js"></script>
+<link rel="stylesheet" href="../media/default.css">
+<link rel="stylesheet" href="style.css">
+
+<div id="app">
+    <p class="title">Arco Íris com apenas uma cor</p>
+    <input type="text" v-model="cor">
+    <div class="arco-iris" :style="{backgroundColor: (cor == '' ? '#bdc3c7' : cor)}">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<script src="index.js"></script>

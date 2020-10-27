@@ -1,0 +1,35 @@
+.arco-iris {
+    width: 700px;
+    height: 150px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.arco-iris div {
+    width: 100px;
+    height: 150px;
+    float: left;
+}
+
+.arco-iris div:nth-child(1) {
+    margin-left: 100px;
+    background-color: rgba(255, 255, 255, .12);
+}
+.arco-iris div:nth-child(2) {
+    background-color: rgba(255, 255, 255, .24);
+}
+.arco-iris div:nth-child(3) {
+    background-color: rgba(255, 255, 255, .36);
+}
+.arco-iris div:nth-child(4) {
+    background-color: rgba(255, 255, 255, .48);
+}
+.arco-iris div:nth-child(5) {
+    background-color: rgba(255, 255, 255, .60);
+}
+.arco-iris div:nth-child(6) {
+    background-color: rgba(255, 255, 255, .72);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
