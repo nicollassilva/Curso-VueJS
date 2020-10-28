@@ -24,13 +24,13 @@ new Vue({
         }
     },
     watch: {
-        vidaPlayer(novo, antigo) {
+        vidaPlayer(novo) {
             if(novo <= 0) {
                 this.jogando = false
                 this.vencedor = 2
             }
         },
-        vidaMonstro(novo, antigo) {
+        vidaMonstro(novo) {
             if(novo <= 0) {
                 this.jogando = false
                 this.vencedor = 1
@@ -57,7 +57,7 @@ new Vue({
             this.addLog(`Player atacou e tirou ${dano} de vida`, 'player')
             this.ataqueMonstro()
         },
-        ataqueMonstro(supremo) {
+        ataqueMonstro() {
             let dano = Math.floor((Math.random() * 12) + 5);
             this.vidaPlayer -= dano
             this.addLog(`Monstro atacou e tirou ${dano} de vida`, 'monstro')

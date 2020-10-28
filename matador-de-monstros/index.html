@@ -38,7 +38,7 @@
             <button class="jog desistir" @click="jogando = !jogando">Desistir</button>
         </div>
         <div class="bloco list" v-if="Array.isArray(logs) && logs.length > 0">
-            <p v-for="log in logs" :class="log.causador">{{ log.texto }}</p>
+            <p v-for="(log, index) in logs" :class="log.causador" :key="index">{{ log.texto }}</p>
         </div>
     </div>
     <script src="default.js"></script>
